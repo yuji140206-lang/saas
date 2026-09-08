@@ -1,0 +1,12 @@
+{
+  "name": "affiliate-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "継続報酬(リカーリング)型アフィリエイトの紹介サイト生成ツールと自動化スクリプト",
+  "scripts": {
+    "generate": "node scripts/generate-site.js",
+    "build": "node scripts/generate-site.js",
+    "add-program": "node scripts/add-program.js",
+    "serve": "node scripts/serve.js"
+  }
+}

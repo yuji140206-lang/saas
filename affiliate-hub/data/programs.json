@@ -1,0 +1,82 @@
+[
+  {
+    "id": "semrush",
+    "name": "Semrush",
+    "category": "SEO・マーケティングツール",
+    "recurringRate": "月額料金の最大40%を継続報酬",
+    "cookieDays": 120,
+    "officialUrl": "https://www.semrush.com/",
+    "summary": "SEO・広告分析の統合プラットフォーム。サブスク契約が続く限り毎月コミッションが発生する定番の継続報酬プログラム。",
+    "why": "法人・フリーランス双方に需要が大きく、年間契約への移行率が高いため単価が安定しやすい。"
+  },
+  {
+    "id": "activecampaign",
+    "name": "ActiveCampaign",
+    "category": "メールマーケティング・CRM",
+    "recurringRate": "月額料金の20〜30%を継続報酬",
+    "cookieDays": 90,
+    "officialUrl": "https://www.activecampaign.com/",
+    "summary": "メール自動化とCRMを兼ねたSaaS。プラン単価が比較的高く、解約率が低いため長期の継続報酬になりやすい。",
+    "why": "中小企業のマーケ担当が長期利用する傾向があり、LTVが伸びやすい。"
+  },
+  {
+    "id": "getresponse",
+    "name": "GetResponse",
+    "category": "メールマーケティング",
+    "recurringRate": "月額料金の33%を継続報酬(上位プランでは成果報酬併用)",
+    "cookieDays": 120,
+    "officialUrl": "https://www.getresponse.com/",
+    "summary": "メール配信・ランディングページ・ウェビナー機能を備えたオールインワンツール。",
+    "why": "無料プランからの引き上げ導線が強く、紹介後に有料転換しやすい。"
+  },
+  {
+    "id": "kinsta",
+    "name": "Kinsta",
+    "category": "マネージドホスティング",
+    "recurringRate": "月額料金の10%を毎月継続(契約が続く限り無期限)",
+    "cookieDays": 60,
+    "officialUrl": "https://kinsta.com/",
+    "summary": "Google Cloud基盤の高速マネージドWordPress/アプリホスティング。",
+    "why": "ホスティングは乗り換えコストが高く解約率が低いため、継続報酬との相性が良い。"
+  },
+  {
+    "id": "cloudways",
+    "name": "Cloudways",
+    "category": "クラウドホスティング",
+    "recurringRate": "初回成果報酬+月額料金の一部を継続報酬(ハイブリッド)",
+    "cookieDays": 90,
+    "officialUrl": "https://www.cloudways.com/",
+    "summary": "AWS/GCP等を選べるマネージドクラウドホスティング。ハイブリッド型で初動収益も作りやすい。",
+    "why": "初回ボーナス+継続報酬の両取りができ、初心者でも成果を出しやすい設計。"
+  },
+  {
+    "id": "systemeio",
+    "name": "Systeme.io",
+    "category": "オールインワンSaaS(LP・メール・決済)",
+    "recurringRate": "月額料金の40〜60%を継続報酬",
+    "cookieDays": 365,
+    "officialUrl": "https://systeme.io/",
+    "summary": "LP作成・メール配信・決済・会員サイトまで一つで完結するSaaS。無料プランありで紹介のハードルが低い。",
+    "why": "Cookie保持期間が長く、無料プランからの緩やかな有料転換でも報酬に繋がる。"
+  },
+  {
+    "id": "thinkific",
+    "name": "Thinkific",
+    "category": "オンライン講座プラットフォーム",
+    "recurringRate": "月額料金の30%を継続報酬(最大12ヶ月)",
+    "cookieDays": 90,
+    "officialUrl": "https://www.thinkific.com/",
+    "summary": "オンラインコース・会員サイトを構築できるプラットフォーム。教育系インフルエンサー向け訴求と相性が良い。",
+    "why": "コース販売者はプラットフォームを乗り換えにくく、継続利用率が高い。"
+  },
+  {
+    "id": "aweber",
+    "name": "AWeber",
+    "category": "メールマーケティング",
+    "recurringRate": "月額料金の30%を無期限で継続報酬",
+    "cookieDays": 365,
+    "officialUrl": "https://www.aweber.com/",
+    "summary": "老舗のメール配信サービス。無期限の継続報酬プログラムが特徴。",
+    "why": "契約が続く限り永続的に報酬が発生するため、紹介した顧客の資産価値が高い。"
+  }
+]
