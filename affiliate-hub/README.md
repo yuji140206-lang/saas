@@ -84,6 +84,25 @@ IDが未設定のプログラムは `?ref=YOUR_AFFILIATE_ID` というプレー�
 任意の静的ホスティングにそのままアップロードできます。ビルドコマンドは
 `npm run generate`、公開ディレクトリは `dist` を指定してください。
 
+### GitHub Pagesで自動公開する(このリポジトリの標準構成)
+
+`.github/workflows/deploy-affiliate-hub.yml` が用意されており、
+`affiliate-hub/` 配下を `master` にpushするたびに自動でビルド・公開されます。
+有効化するには、リポジトリの管理者が一度だけ以下を行ってください(API経由では
+変更できない設定のため、GitHub上での操作が必要です)。
+
+1. GitHubのリポジトリ → **Settings → Pages** を開く
+2. **Source** を「**GitHub Actions**」に変更する
+
+これだけで、次のpush(または `Actions` タブから該当ワークフローを
+`Run workflow` で手動実行)後に `https://<ユーザー名>.github.io/<リポジトリ名>/`
+でサイトが公開されます。
+
+実際のアフィリエイトIDは、リポジトリに直接書かず **Settings → Secrets and
+variables → Actions** で `AFFILIATE_ID_SEMRUSH` のようなSecretとして登録して
+ください。ワークフローがビルド時にそれらを環境変数として読み込みます。IDを
+登録・更新したら、再度pushするかワークフローを再実行すれば反映されます。
+
 ## 法令順守について
 
 アフィリエイトリンクを含むページには、景品表示法・特定商取引法・各アフィリエイト
