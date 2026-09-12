@@ -1,0 +1,53 @@
+name: Deploy affiliate-hub to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "affiliate-hub/**"
+      - ".github/workflows/deploy-affiliate-hub.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate site
+        working-directory: affiliate-hub
+        env:
+          AFFILIATE_ID_SEMRUSH: ${{ secrets.AFFILIATE_ID_SEMRUSH }}
+          AFFILIATE_ID_ACTIVECAMPAIGN: ${{ secrets.AFFILIATE_ID_ACTIVECAMPAIGN }}
+          AFFILIATE_ID_GETRESPONSE: ${{ secrets.AFFILIATE_ID_GETRESPONSE }}
+          AFFILIATE_ID_KINSTA: ${{ secrets.AFFILIATE_ID_KINSTA }}
+          AFFILIATE_ID_CLOUDWAYS: ${{ secrets.AFFILIATE_ID_CLOUDWAYS }}
+          AFFILIATE_ID_SYSTEMEIO: ${{ secrets.AFFILIATE_ID_SYSTEMEIO }}
+          AFFILIATE_ID_THINKIFIC: ${{ secrets.AFFILIATE_ID_THINKIFIC }}
+          AFFILIATE_ID_AWEBER: ${{ secrets.AFFILIATE_ID_AWEBER }}
+        run: node scripts/generate-site.js
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: affiliate-hub/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
